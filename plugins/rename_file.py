@@ -45,7 +45,7 @@ async def set_caption(bot, update):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('sʜᴏᴡ ᴄᴜʀʀᴇɴᴛ ᴄᴀᴘᴛɪᴏɴ, callback_data = "shw_caption")      
+                    InlineKeyboardButton('sʜᴏᴡ ᴄᴜʀʀᴇɴᴛ ᴄᴀᴘᴛɪᴏɴ', callback_data = "shw_caption")      
                 ],
                 [
                     InlineKeyboardButton('ᴅᴇʟᴇᴛᴇ ᴄᴀᴘᴛɪᴏɴ', callback_data = "d_caption")
