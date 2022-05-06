@@ -1,4 +1,4 @@
-import o
+import os
 
 class Config(object):
     # get a token from @BotFather
