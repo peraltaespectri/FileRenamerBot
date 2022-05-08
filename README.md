@@ -7,9 +7,7 @@
 * ✅Supports Custom Caption/ Permanent Thumbnail
 * ✅Force Subscribe To Targeted Chat
 
-->**Updates Here**
-
-[DK BOTx](https://t.me/dk_botx)    
+->**Updates [Here](https://telegram.dog/dk_botx)** 
 
 # Deploy straight to Heroku!
 
