@@ -11,6 +11,10 @@
 
 # Deploy straight to Heroku!
 
+Copie e complete com o link do seu repositório 
+
+https://heroku.com/deploy?template= seu repositorio aqui
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DKBOTx/FileRenamerBot)
 
 # Required Strings :-
