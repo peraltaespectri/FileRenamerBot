@@ -42,12 +42,12 @@ async def help_user(bot, update):
     if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
-            if user.status == "kicked":
-               await update.reply_text(" Sorry, You're Banned")
+            if user.status == "Banido":
+               await update.reply_text("Desculpe, você está banido")
                return
         except UserNotParticipant:
             await update.reply_text(
-                text="**Due To The Huge Traffic Only Channel Members Can Use This Bot Means You Need To Join The Below Mentioned Channel Before Using Me! **",
+                text="**Devido ao enorme tráfego, apenas membros do canal podem usar este bot significa que você precisa ingressar no canal mencionado abaixo antes de me usar! **",
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text="ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{update_channel}")]
               ])
@@ -60,15 +60,15 @@ async def help_user(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('📝 ʀᴇɴᴀᴍᴇ', callback_data = "rnme"),
-                    InlineKeyboardButton('📂 ғɪʟᴇ ᴛᴏ ᴠɪᴅᴇᴏ', callback_data = "f2v")
+                    InlineKeyboardButton('Renomear', callback_data = "rnme"),
+                    InlineKeyboardButton('Arquivo Para Vídeo', callback_data = "f2v")
                 ],
                 [
-                    InlineKeyboardButton('🎞️ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ', callback_data = "cthumb"),
-                    InlineKeyboardButton('📑 ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ', callback_data = "ccaption")
+                    InlineKeyboardButton('Miniatura Personalizada', callback_data = "cthumb"),
+                    InlineKeyboardButton('Legenda Personalizada', callback_data = "ccaption")
                 ],
                 [
-                    InlineKeyboardButton('😉 ᴀʙᴏᴜᴛ ', callback_data = "about")
+                    InlineKeyboardButton('Sobre', callback_data = "about")
                 ]
             ]
         )
@@ -77,18 +77,18 @@ async def help_user(bot, update):
 @Mai_bOTs.on_message(pyrogram.filters.command(["start"]))
 async def start_me(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are Banned")
+        await update.reply_text("Você está banido")
         return
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
-            if user.status == "kicked":
-               await update.reply_text(" Sorry,You've Been Flooding Me So My Owner Removed You From Using Me If You Think It's An Error Contact : @Faris_TG")
+            if user.status == "Banido":
+               await update.reply_text(" Desculpe, você está me inundando, então meu dono removeu você de me usar se você acha que é um erro entre em contato : @Faris_TG")
                return
         except UserNotParticipant:
             await update.reply_text(
-                text="**Due To The Huge Traffic Only Channel Members Can Use This Bot Means You Need To Join The Below Mentioned Channel Before Using Me! **",
+                text="**Devido ao enorme tráfego, apenas membros do canal podem usar este bot significa que você precisa ingressar no canal mencionado abaixo antes de me usar! **",
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text="ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{update_channel}")]
               ])
@@ -99,15 +99,15 @@ async def start_me(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                        InlineKeyboardButton("Help", callback_data = "ghelp")
+                        InlineKeyboardButton("Ajuda", callback_data = "ghelp")
                 ],
                 [
-                    InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/dk_botx'),
-                    InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/dkbotxchats')
+                    InlineKeyboardButton('Atualizações', url='https://t.me/dk_botx'),
+                    InlineKeyboardButton('Apoio, Suporte', url='https://t.me/dkbotxchats')
                 ],
                 [
-                    InlineKeyboardButton('ᴅᴇᴠᴏʟᴏᴘᴇʀ', url='https://t.me/vloggerdeven_TG'),
-                    InlineKeyboardButton('sᴏᴜʀᴄᴇ', url='https://github.com/DKBOTx/FileRenamerBot')
+                    InlineKeyboardButton('Desenvolvedor', url='https://t.me/vloggerdeven_TG'),
+                    InlineKeyboardButton('Código Fonte', url='https://github.com/DKBOTx/FileRenamerBot')
                 ]
             ]
         ),
@@ -125,8 +125,8 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('ʙᴀᴄᴋ', callback_data = "ghelp"),
-                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
+                    InlineKeyboardButton('VOLTAR', callback_data = "ghelp"),
+                    InlineKeyboardButton("FECHAR", callback_data = "close")
                 ]
             ]
         )
@@ -138,8 +138,8 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('ʙᴀᴄᴋ', callback_data = "ghelp"),
-                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
+                    InlineKeyboardButton('VOLTAR', callback_data = "ghelp"),
+                    InlineKeyboardButton("FECHAR", callback_data = "close")
                 ]
             ]
         )
@@ -151,12 +151,12 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('sʜᴏᴡ ᴄᴜʀʀᴇɴᴛ ᴄᴀᴘᴛɪᴏɴ', callback_data = "shw_caption"),
-                    InlineKeyboardButton("ᴅᴇʟᴇᴛᴇ ᴄᴀᴘᴛɪᴏɴ", callback_data = "d_caption")
+                    InlineKeyboardButton('Mostrar Legenda Atual', callback_data = "shw_caption"),
+                    InlineKeyboardButton("Excluir Legenda", callback_data = "d_caption")
                 ],
                 [
-                    InlineKeyboardButton('ʙᴀᴄᴋ', callback_data = "ghelp"),
-                    InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data = "close")
+                    InlineKeyboardButton('VOLTAR', callback_data = "ghelp"),
+                    InlineKeyboardButton('FECHAR', callback_data = "close")
                 ]
             ]
         )
@@ -168,8 +168,8 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('ʙᴀᴄᴋ', callback_data = "ghelp"),
-                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
+                    InlineKeyboardButton('VOLTAR', callback_data = "ghelp"),
+                    InlineKeyboardButton("FECHAR", callback_data = "close")
                 ]
             ]
         )
@@ -178,7 +178,7 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
         await query.message.delete()
         try:
             await query.message.reply_text(
-                text = "<b>Process Cancelled</b>"
+                text = "<b>Processo Cancelado</b>"
      )
         except:
             pass 
@@ -189,12 +189,12 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('📝 ʀᴇɴᴀᴍᴇ', callback_data = "rnme"),
-                    InlineKeyboardButton('📂 ғɪʟᴇ ᴛᴏ ᴠɪᴅᴇᴏ', callback_data = "f2v")
+                    InlineKeyboardButton('RENOMEAR', callback_data = "rnme"),
+                    InlineKeyboardButton('ARQUIVO PARA VÍDEO', callback_data = "f2v")
                 ],
                 [
-                    InlineKeyboardButton('🎞️ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ', callback_data = "cthumb"),
-                    InlineKeyboardButton('📑 ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ', callback_data = "ccaption")
+                    InlineKeyboardButton('Miniatura Personalizada', callback_data = "cthumb"),
+                    InlineKeyboardButton('Legenda Personalizada', callback_data = "ccaption")
                 ],
                 [
                     InlineKeyboardButton(' 🫣 ᴀʙᴏᴜᴛ', callback_data = "about")
@@ -208,16 +208,16 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
                 caption = await get_caption(query.from_user.id)
                 c_text = caption.caption
              except:
-                c_text = "Sorry but you haven't added any caption yet please set your caption through /scaption command" 
+                c_text = "Desculpe, mas você ainda não adicionou nenhuma legenda, por favor, defina sua legenda através do comando /scaption" 
              await query.message.edit(
-                  text=f"<b>Your Custom Caption:</b> \n\n{c_text} ",
+                  text=f"<b>Sua legenda personalizada:</b> \n\n{c_text} ",
                   parse_mode="html", 
                   disable_web_page_preview=True, 
                   reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('ʙᴀᴄᴋ', callback_data = "ccaption"),
-                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
+                    InlineKeyboardButton('VOLTAR', callback_data = "ccaption"),
+                    InlineKeyboardButton("FECHAR", callback_data = "close")
                 ]
             ]
         )
@@ -229,8 +229,8 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('ʙᴀᴄᴋ', callback_data = "ghelp"),
-                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
+                    InlineKeyboardButton('VOLTAR', callback_data = "ghelp"),
+                    InlineKeyboardButton("FECHAR", callback_data = "close")
                 ]
             ]
         )
@@ -241,13 +241,13 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
         except:
             pass
         await query.message.edit_text(
-            text="<b>caption deleted successfully</b>",
+            text="<b>legenda excluída com sucesso</b>",
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('ʙᴀᴄᴋ', callback_data = "ccaption"),
-                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
+                    InlineKeyboardButton('VOLTAR', callback_data = "ccaption"),
+                    InlineKeyboardButton("FECHAR", callback_data = "close")
                 ]
             ]
         )
