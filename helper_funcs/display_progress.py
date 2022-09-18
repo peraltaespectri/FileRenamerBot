@@ -7,13 +7,13 @@ import math
 import os
 import time
 
-# the secret configuration specific things
+# a configuração secreta coisas específicas
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
     from config import Config
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-# the Strings used for this "thing"
+# as Strings usadas para isso "thing"
 from translation import Translation
 
 
@@ -21,7 +21,7 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
     reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("❌ Cᴀɴᴄᴇʟ", callback_data = "closeme")
+                    InlineKeyboardButton("Cancelar", callback_data = "closeme")
                 ]
             ]
         )
@@ -38,12 +38,12 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-        progress = "[{0}{1}] \n <b>📊Percentage:</b> {2}%\n".format(
+        progress = "[{0}{1}] \n <b>📊Porcentagem:</b> {2}%\n".format(
             ''.join(["■" for i in range(math.floor(percentage / 5))]),
             ''.join(["□" for i in range(20 - math.floor(percentage / 5))]),
             round(percentage, 2))
 
-        tmp = progress + "<b>✅Completed:</b>{0} \n<b>📁Total Size:</b> {1}\n<b>🚀Speed:</b> {2}/s\n<b>⌚️ETA:</b> {3}\n".format(
+        tmp = progress + "<b>✅Concluído:</b>{0} \n<b>📁Tamanho Total:</b> {1}\n<b>🚀Velocidade:</b> {2}/s\n<b>⌚️ETA:</b> {3}\n".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
