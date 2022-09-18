@@ -1,24 +1,24 @@
 class Translation(object):
-    START_TEXT = """ <b> Hi {} , \nI'm A Simple File Renamer+File To Video Converter Bot With Permanent Thumbnail And Custom Caption support!</b> \n
+    START_TEXT = """ <b> Olá! {} , \nEu sou um simples File Renamer File To Video Converter Bot com suporte permanente para miniaturas e legendas personalizadas!</b> \n
 
-<b>Developed By Team @DK_BOTx </b> \n 
+<b>Desenvolvido pela equipe @DK_BOTx </b> \n 
 """
 
-    BANNED_USER_TEXT = "Sorry!! But @DK_BOTx As Banned You From Using This Service. That Means You Can't Run Meh Now! \n \n Contact : @No_OnE_Kn0wS_Me For more Details.. " 
-    DOWNLOAD_START = "<b>Downloading To My server !! Pls Wait</b>"
-    UPLOAD_START = "<b>Downloading Completed Now I'm Uploading Into TeleGram</b>"
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "<b>Thank you for Using Me Support Our Channel @DK_BOTx ❤️</b>"
-    SAVED_CUSTOM_THUMB_NAIL = "<b>thumbnail Saved ✅ This Is Permanent Until</b> /delthumb ❤"
-    DEL_ETED_CUSTOM_THUMB_NAIL = "thumbnail cleared succesfully🤦"
-    SAVED_RECVD_DOC_FILE = "<b>File Downloaded Successfully 😎</b>"
-    REPLY_TO_DOC_FOR_RENAME_FILE = "<b>Please Reply To An File With /rename fil name extension To rename a file</b>"
-    REPLY_TO_FILE_FOR_CONVERT = "<b> Please Reply To An File With /c2v To Convert It Into Streamable video File</b>"
+    BANNED_USER_TEXT = "Desculpe!! Mas @DK_BOTx Como proibiu você de usar este serviço. Isso significa que você não pode executar Meh agora! \n \n Contato : @No_OnE_Kn0wS_Me Para mais detalhes.. " 
+    DOWNLOAD_START = "<b>Baixando para meu servidor !! Por favor, aguarde...</b>"
+    UPLOAD_START = "<b>Download concluído agora estou enviando para o Telegram</b>"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "<b>Obrigado por me usar Apoie nosso canal @DK_BOTx ❤️</b>"
+    SAVED_CUSTOM_THUMB_NAIL = "<b>Miniatura salva ✅ Isso é permanente até</b> /delthumb ❤"
+    DEL_ETED_CUSTOM_THUMB_NAIL = "Miniatura apagada com sucesso"
+    SAVED_RECVD_DOC_FILE = "<b>Arquivo baixado com sucesso</b>"
+    REPLY_TO_DOC_FOR_RENAME_FILE = "<b>Por favor, responda a um arquivo com /rename extensão de nome de arquivo Para renomear um arquivo</b> \nExemplos :  </code>/rename foto.jpg</code> e </code>/rename video.mp4</code>"
+    REPLY_TO_FILE_FOR_CONVERT = "<b> Por favor, responda a um arquivo com /c2v Para convertê-lo em arquivo de vídeo Streamable</b>"
     CUSTOM_CAPTION_UL_FILE = " "
-    NO_THUMB_FOUND = "No Thumbnail found"
-    IFLONG_FILE_NAME = """You Gotta Be Kidding Me...Decrease The Number Of Letters😆😉"""
-    ABOUT_ME = """<b>Meh : \n An Telegram File Renamer Bot Which Can Rename A Telegram Files. \n You Can Set Permanent Thumbnail For The File So You Don't Have To Send Custom Thumbs All The Time.\n \n i can also convert files into videos \n My Devoloper @vloggerdeven_TG</b>"""
-    HELP_USER = """Checkout The Available Commands Here \n\n If you Like Me Support Us @DK_BOTx❤️"""
-    RENAME_HELP = """Here are The Available Commands In Reanme \n\n\n▪️ <code>/rename</code> : Reply To An File/video With <code>/rename Filename.extension</code> For Renaming"""
-    C2V_HELP = """Here Are The Available Commands In File To Video \n\n\n ▪️<code>/c2v</code> : Reply To An File With /c2v To Convert It Into Video"""
-    THUMBNAIL_HELP = """Here Are The Available Commands In Custom Thumbnail \n\n\n ▪️ Send A Photo To Set The Custom Thumbnail \n▪️ <code>/showthumb</code> : For Checking The Current Thumbnail \n▪️<code>/delthumb</code> : For Deleting The Current Saved Thumbnail"""
-    CCAPTION_HELP = """Here Are The Available Commands In Custom Caption \n\n\n ▪️<code>/scaption</code> Use This Command To Save Your Custom Caption \n<b>Usage:</b> <code>/scaption your caption text</code> \n\n<b>[You Can Use</b> <code>{filename}</code> <b>For showing new file name in the caption]</b> """
+    NO_THUMB_FOUND = "Nenhuma miniatura encontrada"
+    IFLONG_FILE_NAME = """Você Deve Estar Brincando comigo... Diminua o Número de Letras"""
+    ABOUT_ME = """<b>Eu Sou : \n Um bot Renamer de arquivo de telegrama que pode renomear um arquivo de telegrama. \n Você pode definir miniaturas permanentes para o arquivo para não precisar enviar miniaturas personalizadas o tempo todo.\n \n eu também posso converter arquivos em vídeos \n Meu desenvolvedor @vloggerdeven_TG</b>"""
+    HELP_USER = """Confira aqui os comandos disponíveis \n\n Se você gosta de mim nos apoie @DK_BOTx❤️"""
+    RENAME_HELP = """Aqui estão os comandos disponíveis em renomear \n\n\n▪️ <code>/rename</code> : Responder a um arquivo/vídeo com <code>/rename Nomedoarquivo.extensão</code> Para renomear"""
+    C2V_HELP = """Aqui estão os comandos disponíveis no arquivo para vídeo \n\n\n ▪️<code>/c2v</code> : Responder a um arquivo com /c2v Para convertê-lo em vídeo"""
+    THUMBNAIL_HELP = """Aqui estão os comandos disponíveis na miniatura personalizada \n\n\n ▪️ Envie uma foto para definir a miniatura personalizada \n▪️ <code>/showthumb</code> : Para verificar a miniatura atual \n▪️<code>/delthumb</code> : Para excluir a miniatura salva atual"""
+    CCAPTION_HELP = """Aqui estão os comandos disponíveis na legenda personalizada \n\n\n ▪️<code>/scaption</code> Use este comando para salvar sua legenda personalizada \n<b>Use:</b> <code>/scaption seu texto de legenda</code> \n\n<b>[Você pode usar</b> <code>{filename}</code> <b>Para mostrar o novo nome do arquivo na legenda]</b> """
