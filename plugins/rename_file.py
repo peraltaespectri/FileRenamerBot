@@ -40,15 +40,15 @@ from database.db import *
 async def set_caption(bot, update):
     if len(update.command) == 1:
         await update.reply_text(
-            "Custom Caption \n\n you can use this command to set your own caption  \n\n Usage : /scaption Your caption text \n\n note : For current file name use : <code>{filename}</code>", 
+            "Legenda personalizada \n\n você pode usar este comando para definir sua própria legenda  \n\n Use: /scaption Seu texto de legenda \n\n Nota : Para o nome do arquivo atual, use : <code>{filename}</code>", 
             quote = True, 
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('sʜᴏᴡ ᴄᴜʀʀᴇɴᴛ ᴄᴀᴘᴛɪᴏɴ', callback_data = "shw_caption")      
+                    InlineKeyboardButton('Mostrar Legenda Atual', callback_data = "shw_caption")      
                 ],
                 [
-                    InlineKeyboardButton('ᴅᴇʟᴇᴛᴇ ᴄᴀᴘᴛɪᴏɴ', callback_data = "d_caption")
+                    InlineKeyboardButton('Deletar Legenda', callback_data = "d_caption")
                 ]
             ]
         ) 
@@ -56,7 +56,7 @@ async def set_caption(bot, update):
     else:
         command, CSTM_FIL_CPTN = update.text.split(' ', 1)
         await update_cap(update.from_user.id, CSTM_FIL_CPTN)
-        await update.reply_text(f"**--Your Caption--:**\n\n{CSTM_FIL_CPTN}", quote=True)
+        await update.reply_text(f"**--Sua legenda--:**\n\n{CSTM_FIL_CPTN}", quote=True)
 
 
 @Mai_bOTs.on_message(pyrogram.filters.command(["rename"]))
@@ -65,12 +65,12 @@ async def rename_doc(bot, update):
     if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
-            if user.status == "kicked":
-               await update.reply_text(" Sorry,You've Been Banned From Using Meh!")
+            if user.status == "Banido":
+               await update.reply_text(" Desculpe, você foi proibido de me usar!")
                return
         except UserNotParticipant:
             await update.reply_text(
-                text="**Due To The Huge Traffic Only Channel Members Can Use This Bot Means You Need To Join The Below Mentioned Channel Before Using Me! **",
+                text="**Devido ao enorme tráfego, apenas membros do canal podem usar este bot significa que você precisa ingressar no canal mencionado abaixo antes de me usar! **",
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text="ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{update_channel}")]
               ])
@@ -163,7 +163,7 @@ async def rename_doc(bot, update):
                 caption=f"{caption_text2}",
                 parse_mode = "html",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ", url=f"https://t.me/dkbotxchats")]
+                    [ InlineKeyboardButton(text="Bate-Papo de Suporte", url=f"https://t.me/dkbotxchats")]
               ]), 
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
