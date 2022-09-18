@@ -11,7 +11,7 @@ class Translation(object):
     SAVED_CUSTOM_THUMB_NAIL = "<b>Miniatura salva ✅ Isso é permanente até</b> /delthumb ❤"
     DEL_ETED_CUSTOM_THUMB_NAIL = "Miniatura apagada com sucesso"
     SAVED_RECVD_DOC_FILE = "<b>Arquivo baixado com sucesso</b>"
-    REPLY_TO_DOC_FOR_RENAME_FILE = "<b>Por favor, responda a um arquivo com /rename extensão de nome de arquivo Para renomear um arquivo</b> \nExemplos :  </code>/rename foto.jpg</code> e </code>/rename video.mp4</code>"
+    REPLY_TO_DOC_FOR_RENAME_FILE = "<b>Por favor, responda a um arquivo com /rename extensão de nome de arquivo Para renomear um arquivo</b> \nExemplos :  ```/rename foto.jpg``` e ```/rename video.mp4``` "
     REPLY_TO_FILE_FOR_CONVERT = "<b> Por favor, responda a um arquivo com /c2v Para convertê-lo em arquivo de vídeo Streamable</b>"
     CUSTOM_CAPTION_UL_FILE = " "
     NO_THUMB_FOUND = "Nenhuma miniatura encontrada"
